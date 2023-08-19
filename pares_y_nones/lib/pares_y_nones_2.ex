@@ -3,6 +3,9 @@ IO.puts("*                   Bienvenid@ al juego de pares y nones versión 2    
 IO.puts("*                                Comencemos la batalla                                 *")
 IO.puts("****************************************************************************************")
 
+eleccion = IO.gets("Elige entre pares y nones: ") |> String.trim()
+IO.puts("Vaya!!! has elegido #{eleccion}")
+
 IO.puts("1......")
 :timer.sleep(2000)
 IO.puts("2......")
@@ -10,10 +13,6 @@ IO.puts("2......")
 IO.puts("3......")
 :timer.sleep(2000)
 
-
-eleccion = IO.gets("Elige entre pares y nones: ") |> String.trim()
-
-IO.puts("Vaya!!! has elegido #{eleccion}")
 usuario = IO.gets("¿Cuál es tu número?(1 a 10) ") |> String.trim() |> String.to_integer()
 computadora = Enum.random(1..10)
 
